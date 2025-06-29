@@ -15,5 +15,18 @@ Given path '/users/login'
   # Validar contacto
   Given path '/contactList'
     And header Authorization = 'Bearer ' + authToken
+    And request {
+  "firstName": "Pruebas",
+  "lastName": "UDEA",
+  "birthdate": "1970-01-01",
+  "email": "udea@fake.com",
+  "phone": "8005555555",
+  "street1": "1 Main St.",
+  "street2": "Apartment A",
+  "city": "Aranjuez",
+  "stateProvince": "KS",
+  "postalCode": "12345",
+  "country": "COL"
+}
     When method GET
     Then status 200
