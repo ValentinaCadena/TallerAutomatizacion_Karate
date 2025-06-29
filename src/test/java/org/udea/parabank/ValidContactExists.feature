@@ -1,10 +1,10 @@
-@appcontact_validcontact
+@appcontact_validcontactexists
 Feature: valid contact exists
 Background:
 * url baseUrl
 * header Accept = 'application/json'
 
-Scenario: login y validar contacto
+Scenario: login y validar contacto existente
 # Login 
 Given path '/users/login'
   And request { "email": "valentina.prueba@gmail.com", "password": "Hola12345" }
